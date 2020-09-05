@@ -1,6 +1,5 @@
 package br.com.dicasdopinguim.cursomc.services;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,13 +13,7 @@ import br.com.dicasdopinguim.cursomc.services.exception.ObjectNotFoundException;
 public class CategoriaService {
 	
 	@Autowired
-	private CategoriaRepository repo;
-	
-	public List listar() {
-		List<Categoria> lista = repo.findAll();
-		return lista;
-	}
-	
+	private CategoriaRepository repo;	
 
 	public Categoria buscar(Integer id){
 		Optional<Categoria> obj = repo.findById(id);
